@@ -1,0 +1,104 @@
+
+:root {
+  /* Light Theme (Refined) */
+  --primary-bg: #f9faff; /* Very light grey background */
+  --secondary-bg: #ffffff; /* White content backgrounds */
+  --text-color: #333; /* Dark grey text */
+  --header-footer-bg: #3a3242; /* Dark blue-grey header/footer */
+  --header-footer-text: #55abbf; /* Light text on header/footer */
+  --border-color: #ddd; /* Light grey borders */
+  --accent-color: #e8bf60; /* Bright blue accent */
+  --button-primary-bg: var(--accent-color);
+  --button-primary-text: #fff;
+  --button-primary-hover-bg: #389718;
+  --button-secondary-bg: #f39c12; /* Orange/Yellow for secondary actions */
+  --button-secondary-text: #fff;
+  --button-secondary-hover-bg: #e67e22;
+  --table-header-bg: #e0e0e0;
+  --table-row-even-bg: #f5f5f5;
+  --correct-answer-bg: #e8f5e9; /* Light green */
+  --correct-answer-text: #1b5e20; /* Dark green */
+  --incorrect-answer-bg: #ffebee; /* Light red */
+  --incorrect-answer-text: #b71c1c; /* Dark red */
+  --hero-bg: #8c6eb8; /* Very light blue */
+}
+
+/* Dark Theme (Refined) */
+body.dark-mode {
+  --primary-bg: #121212; /* Dark background */
+  --secondary-bg: #1e1e1e; /* Darker content backgrounds */
+  --text-color: #eee; /* Light grey text */
+  --header-footer-bg: #333; /* Slightly lighter dark header/footer */
+  --header-footer-text: #eee; /* Light text on header/footer */
+  --border-color: #555; /* Dark grey borders */
+  --accent-color: #ad7e4c; /* Cyan accent for dark mode */
+  --button-primary-bg: var(--accent-color);
+  --button-primary-text: #222;
+  --button-primary-hover-bg: #46b8da;
+  --button-secondary-bg: #d9534f; /* Red for secondary actions in dark mode */
+  --button-secondary-text: #fff;
+  --button-secondary-hover-bg: #c9302c;
+  --table-header-bg: #444;
+  --table-row-even-bg: #333;
+  --correct-answer-bg: #2e7d32; /* Darker green */
+  --correct-answer-text: #a5d6a7; /* Lighter green */
+  --incorrect-answer-bg: #b71c1c; /* Dark red */
+  --incorrect-answer-text: #ffcdd2; /* Lighter red */
+  --hero-bg: #37474f; /* Darker blue-grey */
+}
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scrollbar-width:none;
+    /* Modern, readable system font stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" "Merienda", cursive;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    width: 80%;
+    padding: 30px;
+    max-width: 960px; 
+    margin: 20px auto;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* More pronounced shadow */
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9em;
+}
+
+/* Import component-specific styles */
+@import './styles/Navbar.css';
+@import './styles/Sections.css';

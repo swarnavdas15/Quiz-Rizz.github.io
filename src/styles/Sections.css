@@ -1,0 +1,279 @@
+/* src/styles/Sections.css - General Section Styles */
+
+section {
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: var(--secondary-bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 30px;
+    background-color: var(--hero-bg);
+    border-radius: 12px; 
+}
+
+.hero-section h1 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+
+.user-form-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: var(--text-color);
+}
+
+.user-form-section .form-group {
+    margin-bottom: 20px;
+}
+
+.user-form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.user-form-section input,
+.user-form-section select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-form-section button {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+.user-form-section button:hover {
+    background-color: var(--button-primary-hover-bg);
+}
+
+
+.quiz-container-section {
+    margin-top: 30px;
+    padding: 30px;
+    border-top: 2px solid var(--accent-color); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.quiz-container-section h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+#questionDisplay {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+#optionsDisplay {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    #optionsDisplay {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+#optionsDisplay button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--text-color);
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+#optionsDisplay button:hover:not(:disabled) {
+    background-color: rgba(var(--accent-color-rgb, 52, 152, 219), 0.1); 
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 6px rgba(var(--accent-color-rgb, 52, 152, 219), 0.2);
+}
+
+#optionsDisplay button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+#optionsDisplay button.correct {
+    background-color: var(--correct-answer-bg);
+    color: var(--correct-answer-text);
+    border-color: var(--correct-answer-border);
+    font-weight: bold;
+}
+
+#optionsDisplay button.incorrect {
+    background-color: var(--incorrect-answer-bg);
+    color: var(--incorrect-answer-text);
+    border-color: var(--incorrect-answer-border);
+    font-weight: bold;
+}
+
+.quiz-container-section button.next-question-button {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.quiz-container-section button.next-question-button:hover {
+    background-color: var(--button-primary-hover-bg);
+}
+
+/* Quiz Result Styling */
+.quiz-result-section {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--correct-answer-bg); 
+    border: 1px solid var(--correct-answer-border);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.quiz-result-section h2 {
+    color: var(--correct-answer-text);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.quiz-result-section h3 {
+    color: var(--correct-answer-border);
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.quiz-result-section p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.quiz-result-section button {
+    background-color: var(--button-secondary-bg); 
+    color: var(--button-secondary-text);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.quiz-result-section button:hover {
+    background-color: var(--button-secondary-hover-bg);
+}
+
+/* Leaderboard Styling */
+.leaderboard-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: var(--text-color);
+}
+
+.leaderboard-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.leaderboard-section th,
+.leaderboard-section td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.leaderboard-section th {
+    background-color: var(--table-header-bg);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.leaderboard-section tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-bg);
+}
+
+.leaderboard-section tbody tr:hover {
+    background-color: rgba(var(--accent-color-rgb, 52, 152, 219), 0.05);
+}
+
+.leaderboard-section tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* About Section */
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: var(--text-color);
+}
+
+.about-section p {
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.about-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+    color: #1c8adb; 
+}

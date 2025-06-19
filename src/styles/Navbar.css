@@ -1,0 +1,161 @@
+/* src/styles/Navbar.css - Navbar specific styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    padding: 15px 25px; /* Slightly more padding */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Subtle shadow */
+    position: relative;
+    z-index: 40;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5em; /* Slightly smaller logo */
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(235, 224, 67);
+}
+.logo:hover{
+    color: rgb(209, 147, 84);
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--header-footer-text);
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px; /* Add some padding to links */
+    border-radius: 4px; /* Slight rounded corners for links */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Add background transition */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover/active */
+}
+
+.theme-toggle-btn {
+    background-color: transparent;
+    color: var(--header-footer-text);
+    border: 1px solid var(--header-footer-text);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em; /* Slightly smaller toggle button text */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px; /* Slightly smaller hamburger */
+    height: 20px;
+    z-index: 50;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 2px;
+    background-color: var(--header-footer-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--header-footer-bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out; /* Slightly smoother mobile menu */
+        z-index: 45;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin: 20px 0;
+        font-size: 1.2em; /* Adjust mobile link size */
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links.nav-active li {
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out forwards;
+    }
+    .nav-links.nav-active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.nav-active li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.nav-active li:nth-child(3) { transition-delay: 0.3s; }
+    .nav-links.nav-active li:nth-child(4) { transition-delay: 0.4s; }
+    .nav-links.nav-active li:nth-child(5) { transition-delay: 0.5s; } 
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.nav-active .line1 {
+        transform: rotate(-45deg) translate(-6px, 5px);
+    }
+    .hamburger.nav-active .line2 {
+        opacity: 0;
+    }
+    .hamburger.nav-active .line3 {
+        transform: rotate(45deg) translate(-6px, -5px);
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6); /* Slightly more transparent overlay */
+        z-index: 40;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+    }
+
+    .menu-overlay.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
