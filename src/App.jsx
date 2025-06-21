@@ -127,8 +127,8 @@ function App() {
           );
         } else {
           
-          navigateTo('user');
-          return null;
+         navigateTo('user');
+return <div>Redirecting to start...</div>;
         }
       case 'result':
         return (
