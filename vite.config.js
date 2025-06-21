@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base:"/Quizzo.github.io.git/",
+  base:"/Quizzo.github.io/",
 })
