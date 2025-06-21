@@ -2,7 +2,7 @@
   "name": "quizzo--",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Puja1224/Quizzo.github.io.git",
+  "homepage": "https://github.com/Puja1224/Quizzo.github.io.git/",
   "type": "module",
   "scripts": {
     "dev": "vite",
