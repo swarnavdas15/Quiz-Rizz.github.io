@@ -50,7 +50,7 @@ const Navbar = ({ navigateTo, activeSection }) => {
             </li>
             <li>
               <a href="#user" onClick={(e) => handleLinkClick(e, 'user')} className={activeSection === 'user' ? 'active' : ''}>
-                User
+                Start Game
               </a>
             </li>
             <li>
