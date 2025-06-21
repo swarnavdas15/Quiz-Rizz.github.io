@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import './styles/Navbar.css';
+@import './styles/Sections.css';
 :root {
   /* Light Theme (Refined) */
   --primary-bg: #f9faff; /* Very light grey background */
@@ -46,7 +49,7 @@ body.dark-mode {
   --incorrect-answer-text: #ffcdd2; /* Lighter red */
   --hero-bg: #37474f; /* Darker blue-grey */
 }
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
 
 html, body, #root {
     height: 100%;
@@ -100,5 +103,3 @@ footer {
 }
 
 /* Import component-specific styles */
-@import './styles/Navbar.css';
-@import './styles/Sections.css';
