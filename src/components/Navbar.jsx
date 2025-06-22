@@ -32,9 +32,9 @@ const Navbar = ({ navigateTo, activeSection }) => {
   return (
     <> {/* React Fragment to return multiple top-level elements */}
       <header>
-        <nav className="navbar">
+        <nav className="navbar nav-dark-mode">
           {/* Logo with click handler to navigate to home */}
-          <div className="logo" onClick={() => handleLinkClick(null, 'home')} style={{cursor: 'pointer'}}>Quizzo</div>
+          <div className="logo" onClick={() => handleLinkClick(null, 'home')} style={{cursor: 'pointer'}}>Quizz-Rizz</div>
           
           {/* Navigation Links - apply 'nav-active' class when menu is open */}
           <ul className={`nav-links ${isOpen ? 'nav-active' : ''}`}>
@@ -65,7 +65,7 @@ const Navbar = ({ navigateTo, activeSection }) => {
                 className="theme-toggle-btn"
                 aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               >
-                {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
+                {theme === 'dark' ? '☀️' : '🌙'}
               </button>
             </li>
           </ul>

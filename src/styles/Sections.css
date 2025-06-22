@@ -47,7 +47,18 @@ section {
     font-weight: bold;
     color: var(--text-color);
 }
-
+.hero-button{
+    border-radius: 25px;
+    height: 7vh;
+    color:var(--accent-color);
+    overflow: overlay;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.hero-button:hover{
+    background:url(../assets/StarBg.jpg);
+    background-size: contain;
+}
 .user-form-section input,
 .user-form-section select {
     width: calc(100% - 24px);

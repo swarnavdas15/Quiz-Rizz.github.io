@@ -4,13 +4,13 @@
 @import './styles/Sections.css';
 :root {
   /* Light Theme (Refined) */
-  --primary-bg: #f9faff; /* Very light grey background */
-  --secondary-bg: #ffffff; /* White content backgrounds */
+  --primary-bg:url(./assets/lightTheme.jpg); /* Very light grey background */
+  --secondary-bg:url(./assets/lightTheme.jpg); /* White content backgrounds */
   --text-color: #333; /* Dark grey text */
   --header-footer-bg: #3a3242; /* Dark blue-grey header/footer */
-  --header-footer-text: #55abbf; /* Light text on header/footer */
+  --header-footer-text: #f3eb5b; /* Light text on header/footer */
   --border-color: #ddd; /* Light grey borders */
-  --accent-color: #e8bf60; /* Bright blue accent */
+  --accent-color: #edb531; /* Bright blue accent */
   --button-primary-bg: var(--accent-color);
   --button-primary-text: #fff;
   --button-primary-hover-bg: #389718;
@@ -23,13 +23,13 @@
   --correct-answer-text: #1b5e20; /* Dark green */
   --incorrect-answer-bg: #ffebee; /* Light red */
   --incorrect-answer-text: #b71c1c; /* Dark red */
-  --hero-bg: #8c6eb8; /* Very light blue */
+  --hero-bg: #6b8051ea; /* Very light blue */
 }
 
 /* Dark Theme (Refined) */
 body.dark-mode {
-  --primary-bg: #121212; /* Dark background */
-  --secondary-bg: #1e1e1e; /* Darker content backgrounds */
+  --primary-bg: url(./assets/ThemeBg.jpg); /* Dark background */
+  --secondary-bg:url(./assets/StarBg.jpg); /* Darker content backgrounds */
   --text-color: #eee; /* Light grey text */
   --header-footer-bg: #333; /* Slightly lighter dark header/footer */
   --header-footer-text: #eee; /* Light text on header/footer */
@@ -48,6 +48,9 @@ body.dark-mode {
   --incorrect-answer-bg: #b71c1c; /* Dark red */
   --incorrect-answer-text: #ffcdd2; /* Lighter red */
   --hero-bg: #37474f; /* Darker blue-grey */
+}
+nav.nav-dark-mode{
+   --primary-nav-bg:url(./assets/StarBg.jpg);
 }
 
 
@@ -68,10 +71,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--primary-bg);
+    background: var(--primary-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
     
+}
+nav{
+    background: var(--primary-nav-bg);
+    background-size: contain;
 }
 
 #root {
@@ -86,7 +95,8 @@ main {
     padding: 30px;
     max-width: 960px; 
     margin: 20px auto;
-    background-color: var(--secondary-bg);
+    background: var(--secondary-bg);
+    background-size: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* More pronounced shadow */
     box-sizing: border-box;
@@ -95,7 +105,8 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--header-footer-bg);
+    background:url(./assets/StarBg.jpg);
+    background-size: contain;
     color: var(--header-footer-text);
     flex-shrink: 0;
     transition: background-color 0.3s ease, color 0.3s ease;

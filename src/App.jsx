@@ -156,7 +156,7 @@ return <div>Redirecting to start...</div>;
         {renderSection()} {/* Call the function to render the current section */}
       </main>
       <footer>
-        <p>&copy; 2025 Quizzo made by "Puja Chakraborty". All rights reserved.</p>
+        <p>&copy; 2025 Quizzo "Swarnavdas". All rights reserved.</p>
       </footer>
     </>
   );
