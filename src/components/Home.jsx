@@ -13,7 +13,7 @@ const Home = () => (
 <br />💡 Remember: Every click counts, every question is a chance to shine.</p>
 
  <button
-         onClick={()=>{window.open('#user')}}
+         onClick={()=>{window.open('#quizContainer')}}
           className="hero-button"
         >
           Start Your Quiz
